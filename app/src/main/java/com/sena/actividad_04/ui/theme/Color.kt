@@ -15,3 +15,14 @@ val CirculoFondoIcono = Color(0xFFDCD8F6)
 val MoradoPrincipal = Color(0xFF5347C7)
 val TextoTitulo = Color(0xFF1F2430)
 val TextoSubtitulo = Color(0xFF6E717C)
+
+// --- Colores para la Pantalla 2: Lista de Libros (BookListScreen) ---
+val BlancoTarjeta = Color(0xFFFFFFFF)
+val BordeBotonDetalle = Color(0xFFC5C2E5)
+val FondoBotonDetalle = Color(0xFFF7F6FD)
+
+// Colores de los recuadros de cada libro en la lista
+val ColorLibroAzul = Color(0xFF3949AB)
+val ColorLibroVerde = Color(0xFF66BB6A)
+val ColorLibroNaranja = Color(0xFFFFA726)
+val ColorLibroCeleste = Color(0xFF26C6DA)
