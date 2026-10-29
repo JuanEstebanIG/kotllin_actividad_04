@@ -33,3 +33,8 @@ val BordeInsignia = Color(0xFFFFB74D)
 val TextoNaranja = Color(0xFFE65100)
 val NaranjaBoton = Color(0xFFF29C38)
 val PortadaLibroFondo = Color(0xFF1E212B)
+
+val VerdeExito = Color(0xFF4CAF50)
+val FondoVerdeIcono = Color(0xFFE8F5E9)
+val BordeVerdeTarjeta = Color(0xFFC8E6C9)
+val TextoVerdeExito = Color(0xFF2E7D32)
