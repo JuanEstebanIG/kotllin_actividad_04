@@ -26,3 +26,10 @@ val ColorLibroAzul = Color(0xFF3949AB)
 val ColorLibroVerde = Color(0xFF66BB6A)
 val ColorLibroNaranja = Color(0xFFFFA726)
 val ColorLibroCeleste = Color(0xFF26C6DA)
+
+// --- Colores para la Pantalla 3: Detalle del Libro (BookDetailScreen) ---
+val FondoInsignia = Color(0xFFFFF4E6)
+val BordeInsignia = Color(0xFFFFB74D)
+val TextoNaranja = Color(0xFFE65100)
+val NaranjaBoton = Color(0xFFF29C38)
+val PortadaLibroFondo = Color(0xFF1E212B)

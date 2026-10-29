@@ -10,6 +10,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.toRoute
+import com.sena.actividad_04.ui.screen.BookDetailScreen
 import com.sena.actividad_04.ui.screen.BookListScreen
 import com.sena.actividad_04.ui.screen.InicioScreen
 
@@ -42,6 +43,17 @@ fun AppNavigation(
 
         composable<DetalleLibro> { backStackEntry ->
             val args = backStackEntry.toRoute<DetalleLibro>()
+
+            BookDetailScreen(
+                receivedBookName = args.nombreLibro,
+                onNavigateToConfirmation = { bookName ->
+                    navController.navigate(ConfirmacionPrestamo(nombreLibro = bookName))
+                }
+            )
+        }
+
+        composable<ConfirmacionPrestamo> { backStackEntry ->
+            val args = backStackEntry.toRoute<ConfirmacionPrestamo>()
         }
     }
 }
