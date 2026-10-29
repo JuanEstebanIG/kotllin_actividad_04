@@ -10,6 +10,7 @@ import com.sena.actividad_04.ui.screen.BookDetailScreen
 import com.sena.actividad_04.ui.screen.BookListScreen
 import com.sena.actividad_04.ui.screen.ConfirmationScreen
 import com.sena.actividad_04.ui.screen.InicioScreen
+import com.sena.actividad_04.ui.screen.MyReservationsScreen
 
 @Composable
 fun AppNavigation(
@@ -55,7 +56,7 @@ fun AppNavigation(
             ConfirmationScreen(
                 reservedBookName = args.nombreLibro,
                 onNavigateToHome = {
-                    navController.navigate(Inicio) {
+                    navController.navigate(MyReservations) {
                         popUpTo(Inicio) {
                             inclusive = false
                         }
@@ -64,6 +65,18 @@ fun AppNavigation(
             )
         }
 
-
+        composable<MyReservations> {
+            MyReservationsScreen(
+                onNavigateToDetail = { bookName, reservationDate, reservationCode ->
+                    navController.navigate(
+                        ReservationDetail(
+                            bookName = bookName,
+                            reservationDate = reservationDate,
+                            reservationCode = reservationCode
+                        )
+                    )
+                }
+            )
+        }
     }
 }

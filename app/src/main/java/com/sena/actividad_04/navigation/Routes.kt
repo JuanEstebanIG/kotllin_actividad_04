@@ -17,3 +17,26 @@ data class DetalleLibro(
 data class ConfirmacionPrestamo(
     val nombreLibro: String
 )
+
+@Serializable
+data object MyReservations
+
+@Serializable
+data class ReservationDetail(
+    val bookName: String,
+    val reservationDate: String,
+    val reservationCode: String
+)
+
+@Serializable
+data class RenewReservation(
+    val bookName: String,
+    val currentDate: String,
+    val newDate: String
+)
+
+@Serializable
+data class RenewalSuccess(
+    val bookName: String,
+    val newDate: String
+)
