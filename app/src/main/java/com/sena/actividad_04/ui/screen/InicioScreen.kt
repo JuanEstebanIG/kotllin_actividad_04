@@ -33,6 +33,7 @@ import com.sena.actividad_04.ui.theme.FondoPantallaInicio
 import com.sena.actividad_04.ui.theme.MoradoPrincipal
 import com.sena.actividad_04.ui.theme.TextoSubtitulo
 import com.sena.actividad_04.ui.theme.TextoTitulo
+import com.sena.actividad_04.ui.composable.ButtonNavigation
 
 
 @Composable
@@ -88,34 +89,11 @@ fun InicioScreen(
 
         Spacer(modifier = Modifier.height(48.dp))
 
-        Button(
-            onClick = onNavigateToListaLibros,
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(54.dp),
-            shape = RoundedCornerShape(12.dp),
-            colors = ButtonDefaults.buttonColors(
-                containerColor = MoradoPrincipal,
-                contentColor = Color.White
-            ),
-            elevation = ButtonDefaults.buttonElevation(
-                defaultElevation = 4.dp,
-                pressedElevation = 8.dp
-            )
-        ) {
-            Icon(
-                painter = painterResource(id = R.drawable.ic_libro),
-                contentDescription = "Ícono Ver Libros",
-                modifier = Modifier.size(20.dp)
-            )
-
-            Spacer(modifier = Modifier.width(10.dp))
-
-            Text(
-                text = "Ver Libros",
-                fontSize = 16.sp,
-                fontWeight = FontWeight.SemiBold
-            )
-        }
+        ButtonNavigation(
+            texto = "Ver Libros",
+            iconoResId = R.drawable.ic_libro,
+            colorFondo = MoradoPrincipal, // Pasamos el color explícitamente
+            onClick = onNavigateToListaLibros
+        )
     }
 }
