@@ -81,5 +81,30 @@ fun AppNavigation(
                 }
             )
         }
+
+        composable<ReservationDetail> { backStackEntry ->
+            val args = backStackEntry.toRoute<ReservationDetail>()
+            
+            com.sena.actividad_04.ui.screen.ReservationDetailScreen(
+                bookName = args.bookName,
+                reservationDate = args.reservationDate,
+                reservationCode = args.reservationCode,
+                onBackClick = {
+                    navController.popBackStack()
+                },
+                onRenewClick = { bookName, currentDate ->
+                    navController.navigate(
+                        RenewReservation(
+                            bookName = bookName,
+                            currentDate = currentDate,
+                            newDate = "30/06/2026"
+                        )
+                    )
+                },
+                onCancelClick = {
+                    navController.popBackStack() // In a real app, maybe show a dialog or navigate to a "canceled" screen
+                }
+            )
+        }
     }
 }
