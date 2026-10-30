@@ -33,12 +33,14 @@ import com.sena.actividad_04.ui.theme.FondoPantallaInicio
 import com.sena.actividad_04.ui.theme.MoradoPrincipal
 import com.sena.actividad_04.ui.theme.TextoSubtitulo
 import com.sena.actividad_04.ui.theme.TextoTitulo
+import com.sena.actividad_04.ui.theme.TextoVerdeExito
 import com.sena.actividad_04.ui.composable.ButtonNavigation
 
 
 @Composable
 fun InicioScreen(
-    onNavigateToListaLibros: () -> Unit
+    onNavigateToListaLibros: () -> Unit,
+    onNavigateToMyReservations: () -> Unit
 ) {
     Column(
         modifier = Modifier
@@ -87,13 +89,22 @@ fun InicioScreen(
             lineHeight = 20.sp
         )
 
-        Spacer(modifier = Modifier.height(48.dp))
+        Spacer(modifier = Modifier.height(40.dp))
 
         ButtonNavigation(
             texto = "Ver Libros",
             iconoResId = R.drawable.ic_libro,
-            colorFondo = MoradoPrincipal, // Pasamos el color explícitamente
+            colorFondo = MoradoPrincipal,
             onClick = onNavigateToListaLibros
+        )
+
+        Spacer(modifier = Modifier.height(14.dp))
+
+        ButtonNavigation(
+            texto = "Ver Mis Reservas",
+            iconoResId = R.drawable.ic_bookmark,
+            colorFondo = TextoVerdeExito,
+            onClick = onNavigateToMyReservations
         )
     }
 }

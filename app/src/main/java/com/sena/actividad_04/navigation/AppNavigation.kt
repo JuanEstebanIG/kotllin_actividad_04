@@ -27,6 +27,9 @@ fun AppNavigation(
             InicioScreen(
                 onNavigateToListaLibros = {
                     navController.navigate(ListaLibros)
+                },
+                onNavigateToMyReservations = {
+                    navController.navigate(MyReservations)
                 }
             )
         }
@@ -56,7 +59,7 @@ fun AppNavigation(
             ConfirmationScreen(
                 reservedBookName = args.nombreLibro,
                 onNavigateToHome = {
-                    navController.navigate(MyReservations) {
+                    navController.navigate(Inicio) {
                         popUpTo(Inicio) {
                             inclusive = false
                         }
