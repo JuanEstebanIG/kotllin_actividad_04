@@ -13,7 +13,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.sena.actividad_04.R
-import com.sena.actividad_04.ui.composable.InfoNoticeBadge
+import com.sena.actividad_04.ui.section.InfoNoticeSection
 import com.sena.actividad_04.ui.section.MyReservationsCardSection
 import com.sena.actividad_04.ui.section.MyReservationsHeaderSection
 import com.sena.actividad_04.ui.theme.FondoPantallaInicio
@@ -51,7 +51,7 @@ fun MyReservationsScreen(
             )
         }
 
-        InfoNoticeBadge(
+        InfoNoticeSection(
             texto = "Aquí verás todas tus reservas activas.",
             iconoResId = R.drawable.ic_info
         )

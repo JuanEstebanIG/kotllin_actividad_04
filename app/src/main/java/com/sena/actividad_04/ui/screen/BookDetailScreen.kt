@@ -13,9 +13,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.sena.actividad_04.R
-import com.sena.actividad_04.ui.composable.ButtonNavigation
-import com.sena.actividad_04.ui.composable.ParameterBadge
 import com.sena.actividad_04.ui.section.BookDetailSection
+import com.sena.actividad_04.ui.section.SingleButtonActionSection
+import com.sena.actividad_04.ui.section.ParameterBadgeSection
 import com.sena.actividad_04.ui.theme.FondoPantallaInicio
 import com.sena.actividad_04.ui.theme.NaranjaBoton
 
@@ -42,7 +42,7 @@ fun BookDetailScreen(
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier.fillMaxWidth()
         ) {
-            ParameterBadge(
+            ParameterBadgeSection(
                 texto = "Parámetro recibido",
                 iconoResId = R.drawable.ic_download
             )
@@ -57,7 +57,7 @@ fun BookDetailScreen(
             )
         }
 
-        ButtonNavigation(
+        SingleButtonActionSection(
             texto = "Reservar Libro",
             iconoResId = R.drawable.ic_bookmark,
             colorFondo = NaranjaBoton,

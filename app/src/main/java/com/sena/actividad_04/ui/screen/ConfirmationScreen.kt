@@ -13,8 +13,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.sena.actividad_04.R
-import com.sena.actividad_04.ui.composable.ButtonNavigation
-import com.sena.actividad_04.ui.composable.SuccessHeader
+import com.sena.actividad_04.ui.section.SingleButtonActionSection
+import com.sena.actividad_04.ui.section.SuccessHeaderSection
 import com.sena.actividad_04.ui.section.ReservationDetailsSection
 import com.sena.actividad_04.ui.theme.FondoPantallaInicio
 import com.sena.actividad_04.ui.theme.TextoVerdeExito
@@ -40,7 +40,7 @@ fun ConfirmationScreen(
         ) {
             Spacer(modifier = Modifier.height(32.dp))
 
-            SuccessHeader(
+            SuccessHeaderSection(
                 iconResId = R.drawable.ic_check_circle,
                 title = "Reserva Exitosa"
             )
@@ -53,7 +53,7 @@ fun ConfirmationScreen(
             )
         }
 
-        ButtonNavigation(
+        SingleButtonActionSection(
             texto = "Volver al Inicio",
             iconoResId = R.drawable.ic_home,
             colorFondo = TextoVerdeExito,

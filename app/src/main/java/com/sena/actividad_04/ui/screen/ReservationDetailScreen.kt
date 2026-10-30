@@ -10,9 +10,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.sena.actividad_04.R
-import com.sena.actividad_04.ui.composable.ActionButtonsRow
-import com.sena.actividad_04.ui.composable.InfoNoticeBadge
-import com.sena.actividad_04.ui.composable.SuccessNoticeBadge
+import com.sena.actividad_04.ui.section.ActionButtonsSection
+import com.sena.actividad_04.ui.section.InfoNoticeSection
+import com.sena.actividad_04.ui.section.SuccessNoticeSection
 import com.sena.actividad_04.ui.section.ReservationDetailContentSection
 import com.sena.actividad_04.ui.section.TopBarHeaderSection
 import com.sena.actividad_04.ui.theme.FondoPantallaInicio
@@ -39,7 +39,7 @@ fun ReservationDetailScreen(
             onBackClick = onBackClick
         )
 
-        SuccessNoticeBadge(
+        SuccessNoticeSection(
             texto = "Argumentos recibidos",
             iconoResId = R.drawable.ic_check_circle
         )
@@ -55,14 +55,14 @@ fun ReservationDetailScreen(
 
         Spacer(modifier = Modifier.height(24.dp))
 
-        InfoNoticeBadge(
+        InfoNoticeSection(
             texto = "Estos datos fueron enviados desde\nla pantalla anterior como parámetros.",
             iconoResId = R.drawable.ic_info
         )
 
         Spacer(modifier = Modifier.weight(1f))
 
-        ActionButtonsRow(
+        ActionButtonsSection(
             onRenewClick = { onRenewClick(bookName, reservationDate) },
             onCancelClick = onCancelClick
         )

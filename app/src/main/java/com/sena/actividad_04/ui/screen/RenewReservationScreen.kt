@@ -10,7 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.sena.actividad_04.R
-import com.sena.actividad_04.ui.composable.ButtonNavigation
+import com.sena.actividad_04.ui.section.SingleButtonActionSection
 import com.sena.actividad_04.ui.section.RenewBookInfoSection
 import com.sena.actividad_04.ui.section.RenewDatesSection
 import com.sena.actividad_04.ui.section.TopBarHeaderSection
@@ -54,7 +54,7 @@ fun RenewReservationScreen(
 
         Spacer(modifier = Modifier.weight(1f))
 
-        ButtonNavigation(
+        SingleButtonActionSection(
             texto = "Confirmar Renovación",
             iconoResId = R.drawable.ic_check,
             colorFondo = NaranjaBoton,
