@@ -106,5 +106,26 @@ fun AppNavigation(
                 }
             )
         }
+
+        composable<RenewReservation> { backStackEntry ->
+            val args = backStackEntry.toRoute<RenewReservation>()
+
+            com.sena.actividad_04.ui.screen.RenewReservationScreen(
+                bookName = args.bookName,
+                currentDate = args.currentDate,
+                newDate = args.newDate,
+                onBackClick = {
+                    navController.popBackStack()
+                },
+                onConfirmRenewClick = { bookName, newDate ->
+                    navController.navigate(
+                        RenewalSuccess(
+                            bookName = bookName,
+                            newDate = newDate
+                        )
+                    )
+                }
+            )
+        }
     }
 }

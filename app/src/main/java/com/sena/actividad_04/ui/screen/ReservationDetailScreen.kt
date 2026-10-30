@@ -14,7 +14,7 @@ import com.sena.actividad_04.ui.composable.ActionButtonsRow
 import com.sena.actividad_04.ui.composable.InfoNoticeBadge
 import com.sena.actividad_04.ui.composable.SuccessNoticeBadge
 import com.sena.actividad_04.ui.section.ReservationDetailContentSection
-import com.sena.actividad_04.ui.section.ReservationDetailHeaderSection
+import com.sena.actividad_04.ui.section.TopBarHeaderSection
 import com.sena.actividad_04.ui.theme.FondoPantallaInicio
 
 @Composable
@@ -34,7 +34,8 @@ fun ReservationDetailScreen(
             .background(FondoPantallaInicio)
             .padding(horizontal = 20.dp, vertical = 24.dp)
     ) {
-        ReservationDetailHeaderSection(
+        TopBarHeaderSection(
+            title = "Detalle de Reserva",
             onBackClick = onBackClick
         )
 
