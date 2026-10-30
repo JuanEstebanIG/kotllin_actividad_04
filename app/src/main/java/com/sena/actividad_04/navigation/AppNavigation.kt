@@ -127,5 +127,21 @@ fun AppNavigation(
                 }
             )
         }
+        
+        composable<RenewalSuccess> { backStackEntry ->
+            val args = backStackEntry.toRoute<RenewalSuccess>()
+            
+            com.sena.actividad_04.ui.screen.RenewalSuccessScreen(
+                bookName = args.bookName,
+                newDate = args.newDate,
+                onNavigateToMyReservations = {
+                    navController.navigate(MyReservations) {
+                        popUpTo(Inicio) {
+                            inclusive = false
+                        }
+                    }
+                }
+            )
+        }
     }
 }

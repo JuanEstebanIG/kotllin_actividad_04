@@ -19,7 +19,8 @@ import com.sena.actividad_04.ui.theme.BordeVerdeTarjeta
 @Composable
 fun ReservationDetailsSection(
     bookName: String,
-    reservationDate: String
+    reservationDate: String,
+    dateLabel: String = "Fecha:"
 ) {
     Card(
         modifier = Modifier.fillMaxWidth(),
@@ -46,7 +47,7 @@ fun ReservationDetailsSection(
 
             ConfirmationDetailRow(
                 iconResId = R.drawable.ic_calendar,
-                label = "Fecha:",
+                label = dateLabel,
                 value = reservationDate
             )
         }
